@@ -1,0 +1,9 @@
+Building BioCoin
+
+See doc/readme-qt.rst for instructions on building BioCoin Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of BioCoin.
+
+See doc/build-*.txt for instructions on building BioCoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of BioCoin.

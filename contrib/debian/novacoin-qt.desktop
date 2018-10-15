@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BioCoin
+Comment=BioCoin P2P Cryptocurrency
+Comment[ru]=BioCoin, P2P криптовалюта
+Comment[fr]=BioCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BioCoin, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/BioCoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/BioCoin80.xpm
+MimeType=x-scheme-handler/BioCoin;
+Categories=Office;

@@ -1,0 +1,11 @@
+[Unit]
+Description=BioCoin daemon serivce
+After=network.target
+
+[Service]
+Type=simple
+User=BioCoin
+ExecStart=/opt/BioCoin/BioCoind
+
+[Install]
+WantedBy=multi-user.target

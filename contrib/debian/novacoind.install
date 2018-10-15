@@ -1,0 +1,2 @@
+debian/bin/BioCoind usr/bin
+src/BioCoind usr/lib/BioCoin

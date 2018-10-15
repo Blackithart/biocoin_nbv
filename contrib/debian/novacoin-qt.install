@@ -1,0 +1,5 @@
+BioCoin-qt usr/bin
+share/pixmaps/BioCoin32.xpm usr/share/pixmaps
+share/pixmaps/BioCoin80.xpm usr/share/pixmaps
+debian/BioCoin-qt.desktop usr/share/applications
+debian/BioCoin-qt.protocol usr/share/kde4/services/

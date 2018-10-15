@@ -1,0 +1,68 @@
+#!/bin/sh
+
+# PROVIDE: BioCoin
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# BioCoin_enable (bool): Set to NO by default. Set this variable to YES if you want to enable BioCoin service.
+# BioCoin_config (path): Set to /usr/local/etc/BioCoin.conf by default.
+# BioCoin_user:  The user account BioCoin daemon runs as. It uses 'root' user by default.
+# BioCoin_group: The group account BioCoin daemon runs as. It uses 'wheel' group by default.
+# BioCoin_datadir (str): Default to "/var/db/BioCoin". Base data directory.
+
+. /etc/rc.subr
+
+name=BioCoin
+rcvar=BioCoin_enable
+
+: ${BioCoin_enable:=NO}
+: ${BioCoin_config=/usr/local/etc/BioCoin.conf}
+: ${BioCoin_datadir=/var/db/BioCoin}
+: ${BioCoin_user="root"}
+: ${BioCoin_group="wheel"}
+
+required_files=${BioCoin_config}
+command=/usr/local/bin/BioCoind
+BioCoin_chdir=${BioCoin_datadir}
+pidfile="${BioCoin_datadir}/BioCoind.pid"
+stop_cmd=BioCoin_stop
+command_args="-conf=${BioCoin_config} -datadir=${BioCoin_datadir} -daemon -pid=${pidfile}"
+start_precmd="${name}_prestart"
+
+BioCoin_create_datadir()
+{
+	echo "Creating data directory"
+	eval mkdir -p ${BioCoin_datadir}
+	[ $? -eq 0 ] && chown -R ${BioCoin_user}:${BioCoin_group} ${BioCoin_datadir}
+}
+
+BioCoin_prestart()
+{
+	if [ ! -d "${BioCoin_datadir}/." ]; then
+		BioCoin_create_datadir || return 1
+	fi
+}
+
+BioCoin_requirepidfile()
+{
+	if [ ! "0`check_pidfile ${pidfile} ${command}`" -gt 1 ]; then
+		echo "${name} not running? (check $pidfile)."
+		exit 1
+	fi
+}
+
+BioCoin_stop()
+{
+    BioCoin_requirepidfile
+
+	echo "Stopping ${name}."
+	eval ${command} -conf=${BioCoin_config} -datadir=${BioCoin_datadir} stop
+	wait_for_pids ${rc_pid}
+}
+
+load_rc_config $name
+run_rc_command "$1"
