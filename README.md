@@ -4,6 +4,7 @@ RPC Port: 24889
 Network Port: 24885
 
 Ubuntu 18.04 LTS
+----------------
 
 #dependencies
 sudo apt install make
@@ -27,6 +28,7 @@ make -f makefile.unix
 #copy daemon to bin folder
 sudo cp ./BioCoind /usr/bin/
 
-#now sudo BioCoind 
+#now sudo BioCoind
+ 
 #BioCoin.conf auto create in ~/.BioCoin/ folder
 
