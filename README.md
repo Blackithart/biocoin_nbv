@@ -44,7 +44,5 @@ make -f makefile.unix
 
 sudo cp ./BioCoind /usr/bin/
 
-#now sudo BioCoind
- 
-#BioCoin.conf auto create in ~/.BioCoin/ folder
+#now sudo BioCoind and BioCoin.conf will be auto created in ~/.BioCoin/ folder
 
