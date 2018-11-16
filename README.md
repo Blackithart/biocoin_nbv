@@ -10,27 +10,17 @@ Ubuntu 18.04 LTS
 
 #dependencies
 
-sudo apt install make
-
-sudo apt install g++
-
-sudo apt install libssl1.0-dev
-
-sudo apt install libdb-dev
-
-sudo apt install libdb++-dev
-
-sudo apt install libz-dev
-
-sudo apt install libboost-dev
-
-sudo apt install libboost-system-dev
-
-sudo apt install libboost-filesystem-dev
-
-sudo apt install libboost-thread-dev
-
-sudo apt install libboost-program-options-dev
+sudo apt install make  
+sudo apt install g++  
+sudo apt install libssl1.0-dev  
+sudo apt install libdb-dev  
+sudo apt install libdb++-dev  
+sudo apt install libz-dev  
+sudo apt install libboost-dev  
+sudo apt install libboost-system-dev  
+sudo apt install libboost-filesystem-dev  
+sudo apt install libboost-thread-dev  
+sudo apt install libboost-program-options-dev  
 
 #goto source directory
 
