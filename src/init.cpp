@@ -743,12 +743,19 @@ bool AppInit2()
 
     BOOST_FOREACH(string strDest, mapMultiArgs["-seednode"])
         AddOneShot(strDest);
-        AddOneShot(string("dnsseed.biocoin.help"));
-                AddOneShot(string("dns1.seedbiocoin.ru"));
-                AddOneShot(string("dns2.seedbiocoin.ru"));
-                AddOneShot(string("dns3.seedbiocoin.ru"));
-                AddOneShot(string("dns4.seedbiocoin.ru"));
-                AddOneShot(string("dns5.seedbiocoin.ru"));
+        AddOneShot(string("n001.biocoin.pro"));
+                AddOneShot(string("n002.biocoin.pro"));
+                AddOneShot(string("n003.biocoin.pro"));
+                AddOneShot(string("n004.biocoin.pro"));
+                AddOneShot(string("n005.biocoin.pro"));
+                AddOneShot(string("n006.biocoin.pro"));
+                AddOneShot(string("n007.biocoin.pro"));
+                AddOneShot(string("n008.biocoin.pro"));
+                AddOneShot(string("n009.biocoin.pro"));
+                AddOneShot(string("n010.biocoin.pro"));
+                AddOneShot(string("n011.biocoin.pro"));
+                AddOneShot(string("n012.biocoin.pro"));
+                AddOneShot(string("n013.biocoin.pro"));
     // ********************************************************* Step 7: load blockchain
 
     if (!bitdb.Open(GetDataDir()))
