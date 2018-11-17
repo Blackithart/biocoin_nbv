@@ -939,12 +939,19 @@ void ThreadSocketHandler2(void* parg)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-  {"dnsseed.biocoin.help", "dnsseed.biocoin.help"},
-  {"dns1.seedbiocoin.ru", "dns1.seedbiocoin.ru"},
-  {"dns2.seedbiocoin.ru", "dns2.seedbiocoin.ru"},
-  {"dns3.seedbiocoin.ru", "dns3.seedbiocoin.ru"},
-  {"dns4.seedbiocoin.ru", "dns4.seedbiocoin.ru"},
-  {"dns5.seedbiocoin.ru", "dns5.seedbiocoin.ru"},
+  {"n001.biocoin.pro", "n001.biocoin.pro"},
+  {"n002.biocoin.pro", "n002.biocoin.pro"},
+  {"n003.biocoin.pro", "n003.biocoin.pro"},
+  {"n004.biocoin.pro", "n004.biocoin.pro"},
+  {"n005.biocoin.pro", "n005.biocoin.pro"},
+  {"n006.biocoin.pro", "n006.biocoin.pro"},
+  {"n007.biocoin.pro", "n007.biocoin.pro"},
+  {"n008.biocoin.pro", "n008.biocoin.pro"},
+  {"n009.biocoin.pro", "n009.biocoin.pro"},
+  {"n010.biocoin.pro", "n010.biocoin.pro"},
+  {"n011.biocoin.pro", "n011.biocoin.pro"},
+  {"n012.biocoin.pro", "n012.biocoin.pro"},
+  {"n013.biocoin.pro", "n013.biocoin.pro"},
   {"", ""}
 };
 
